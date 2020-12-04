@@ -7,4 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hakkimda', [HomeController::class, 'hakkimda']);
+
+Route::get('/users', [HomeController::class, 'users']);
+Route::get('/product', [HomeController::class, 'product']);
+Route::get('/users_product', [HomeController::class, 'users_product']);
