@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
     public function users()
     {
-       $users = DB::table('users')->get();
+       //$users = DB::table('users')->get();
+        $users=User::all();
        return view('users',compact('users'));
     }
 
