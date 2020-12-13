@@ -19,9 +19,12 @@ class ProductController extends Controller
     public function index()
     {
         //$products=product::all();
-        $products=product::with(['user'])->get();
+        //$products=product::with(['user'])->get();
         //dd($products);
-        return view('product.index',compact('products'));
+        //return view('product.index',compact('products'));
+        $products = Product::with(['user'])->paginate(2);
+
+        return view('home', compact('products'));
     }
 
     /**

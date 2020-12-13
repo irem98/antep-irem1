@@ -17,9 +17,9 @@ Route::get('/users_product', [HomeController::class, 'users_product']);
 /**
  * Product İşlemleri
  */
-Route::get('/create-product', [ProductController::class, 'create'])->name('product.create');
+Route::get('/create-products', [ProductController::class, 'create'])->name('product.create');
 Route::post('/save-product', [ProductController::class, 'store'])->name('product.save');
-Route::get('/show-product', [ProductController::class, 'index'])->name('product.index');
+Route::get('/show-products', [ProductController::class, 'index'])->name('product.index');
 Route::get('/export-product', [ProductController::class, 'export'])->name('product.export');
 
 
@@ -30,4 +30,5 @@ Route::get('/banner', [BannerController::class, 'banner']);
 //latests
 Route::get('/latest', [BannerController::class, 'latest']);
 
+Route::get('/kategori', [BannerController::class, 'category']);
 

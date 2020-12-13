@@ -19,4 +19,9 @@ class BannerController extends Controller
         return view('product.latest',compact('latests'));
     }
 
+    public function category()
+    {
+        $categories = DB::table('categories')->get();
+        return view('product.categories',compact('categories'));
+    }
 }
