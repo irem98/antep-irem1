@@ -2,11 +2,12 @@
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SmsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductExport;
 Route::get('/', function () {
-    return view('layouts.index-master');
+    return view('login');
 });
 
 
@@ -31,4 +32,4 @@ Route::get('/banner', [BannerController::class, 'banner']);
 Route::get('/latest', [BannerController::class, 'latest']);
 
 Route::get('/kategori', [BannerController::class, 'category']);
-
+Route::get('/test', [SmsController::class, 'login']);
